@@ -18,10 +18,7 @@ def pass_generator(size=6, chars=string.ascii_uppercase + string.digits):
 
 
 def login_validation(form):
-    user = User.query.filter_by(email=form.email.data, role='admin').first()
-
-    if not user:
-        user = User.query.filter_by(email=form.email.data).first()
+    user = User.query.filter_by(email=form.email.data).first()
 
     if user is not None:
         if not user.bad_logins:
