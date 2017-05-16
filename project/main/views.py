@@ -22,6 +22,7 @@ def index():
         if form.validate_on_submit():
             return login_validation(form)
 
-        return render_template('auth/login.html', form=form)
+        # return render_template('auth/login.html', form=form)
+        return render_template('home.html')
 
     return render_template('index.html')

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block page_content %}
+  <div>
+    {% if courses %}
+      <ul>
+        {% for course in courses %}
+           <li>{{ category.name }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endblock %}
